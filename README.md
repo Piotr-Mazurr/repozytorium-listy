@@ -12,13 +12,13 @@ Lista 5:
 zadanie 0
 zadanie 1 i zadanie 2 zawarte w jednym notatniku
 
-Lista 6
+Lista 6:
 wersja tex
 wersja pdf
 
-Lista 7
+Lista 7:
 wersja tex
 wersja pdf
 
-Lista 9
+Lista 9:
 skrypt
