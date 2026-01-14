@@ -7,6 +7,7 @@ zadanie 1
 zadanie 2
 
 Lista 4:
+zadanie z mystery boxa
 
 Lista 5:
 zadanie 0
