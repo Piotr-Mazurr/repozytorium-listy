@@ -1,0 +1,157 @@
+%nie chce wyświetlać polskich znaków w tabelach
+\documentclass{article}
+
+% użyte pakiety
+\usepackage{polski}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{hyperref}
+\usepackage[left=3cm, right=3cm, top=2cm, bottom=3cm]{geometry}
+
+\usepackage{listings}
+\lstset{frame=single}
+
+\newtheorem{theorem}{Twierdzenie}[section]
+\newtheorem{definition}[theorem]{Definicja}
+
+\begin{document}
+    
+\section{Listy}
+\textbf{Przykład 1: nieuporządkowana lista (itimize)}
+
+\noindent \textbf{Kod:}
+\begin{lstlisting}
+\begin{lstlisting}
+    \item Akacja
+    \item Cis
+\end{itemize}
+\end{lstlisting}
+
+\noindent \textbf{Wyjście:}
+\begin{itemize}
+    \item Akacja
+    \item Baobab
+    \item Cis
+\end{itemize}
+
+\noindent Natomiast używając \textbf{enumerate} zamiast \textbf{itemize:}
+\begin{enumerate}
+    \item Akacja
+    \item Baobab
+    \item Cis
+\end{enumerate}
+
+\bigskip
+
+\section{Wyrażenia matematyczne}
+\textbf{Przykład 2: wyrażenia "w linii" i we własnym paragrafie}
+
+\noindent \textbf{Kod}:
+\begin{lstlisting}
+W linii: \(a^2 + b^2 = c^2.\)
+
+Wycentrowane:
+\[
+\sum_{i=1}^\infty \frac{1}{n} = \infty
+\]
+\end{lstlisting}
+
+\noindent \textbf{Wyjście:}
+
+W linii: \(a^2 + b^2 = c^2 .\)
+
+Wycentrowane :
+\[
+\sum_{i=1}^\infty \frac{1}{n} = \infty.
+\]
+
+\noindent \textbf{inne przykłady:}
+
+\hspace{4cm} \(\sin^{2}\left(\alpha\right)+\cos^{2}\left(\alpha\right)=1.\)
+\[
+x\in A \cap B \iff x \in A \wedge x \in B. \\
+\]
+\[
+\emptyset \times A = \emptyset. \\
+\]
+
+\[
+\forall x \in \mathbb{R} \ \exists n\in \mathbb{N}_{>0} \ \frac{1}{n}<|x|.
+\]
+
+\section{Środowiska}
+\textbf{Przykład 3: Definicje i twierdzenia}
+
+\noindent Sprawdź w preambule \verb|wyklad6_latex.tex| w jaki sposób zostały użyte makra \verb|\newtheorem.|
+
+\noindent Następnie
+
+\noindent \textbf{Kod:}
+
+\begin{lstlisting}
+\begin{definition}
+Liczba \(n \in \mathbb{N}\) jest pierwsza, gdy \(n>1\) i nie
+istnieje \(1<d<n\) takie, że \(d\) dzieli \(n\
+\end{definition}
+
+\begin{theorem}
+Istnieje nieskońćzenie wiele liczb pierwszych
+\end{theorem}
+\end{lstlisting}
+
+\noindent \textbf{Wyjście:}
+
+\begin{definition}
+Liczba \(n \in \mathbb{N}\) jest pierwsza, gdy \(n>1\) i nie istnieje \(1<d<n\) takie, że \(d\) dzieli \(n\)
+\end{definition}
+
+\begin{theorem}
+Istnieje nieskońćzenie wiele liczb pierwszych
+\end{theorem}
+
+\noindent(Zwróć uwagę na sposób numeracji - żeby wyszła tak jak powyższa, musi być oparta o \textbf{section} zamiast \textbf{subsection})
+
+\section{Fragmenty kodu}
+w poprzednich przykładach pojawiają się obramowane fragmenty kodu: dla nich też istnieje specjalne środowisko. Umieść w preambule fragment:
+\begin{lstlisting}
+\usepackage{listings}
+\lstset{frame=single}
+print(i)
+\end{lstlisting}
+
+\noindent Następnie kod można umieszczać w środowisku \textbf{lstlisting:}
+
+\noindent \textbf{Przykład 4: blok kodu}
+
+\noindent \textbf{Kod:}
+
+\begin{lstlisting}
+\begin{lstlisting}
+for i in range (10):
+print(i)
+\textbackslash end{lstlisting}
+\end{lstlisting}
+
+\noindent \textbf{Wyjście:}
+
+\begin{lstlisting}
+for i in range (10):
+    print(i)
+\end{lstlisting}
+
+\noindent Kod można też umieszczać "w linii" używając \verb|\verb|, np.
+
+\noindent \textbf{Kod:}
+
+\begin{lstlisting}
+ten fragment mówi coś o makrze i podaje 
+przykład użycia.
+\end{lstlisting}
+
+
+\noindent \textbf{Wyjście}: ten fragment mówi coś o makrze \verb|\lstlisting| i podaje przykład użycia.
+
+\end{document}
+
+
